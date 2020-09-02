@@ -12,7 +12,7 @@ class App extends React.Component {
       players: [],
       currentPlayer: {},
     }
-
+this.updateCurrentPlayer=this.updateCurrentPlayer.bind(this);
    
   }
 
@@ -30,7 +30,7 @@ class App extends React.Component {
       });
   };
 
-  updateCurrentPlayer=(item)=> {
+  updateCurrentPlayer(item){
     this.setState({
       currentPlayer: item,
     })

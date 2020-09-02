@@ -3,25 +3,26 @@ import React from 'react';
 
 const PlayerSingle=(props)=>{
     return(
-      
+      <div className="container-fluid">
          <div className="row">
-            <div className="col s12 m7">
+            <div className="col 12">
             <div className="card">
                 <div className="card-image">
-                <img src="https://besthqwallpapers.com/Uploads/1-2-2018/39081/thumb2-lionel-messi-barcelona-la-liga-spain-corner-kick.jpg"/>
-                <span className="card-title">Card Title</span>
+                <img alt="soccer image" src="https://besthqwallpapers.com/Uploads/1-2-2018/39081/thumb2-lionel-messi-barcelona-la-liga-spain-corner-kick.jpg"/>
+                <span className="card-title">{props.player.firstName} {props.player.lastName}</span>
                 </div>
                 <div className="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                        <p>Phone:{props.player.phone}   Email:{props.player.email}</p>
+                        <p>Strength:{props.player.strength} Endurance:{props.player.endurance}</p>
+
                 </div>
                 <div className="card-action">
-                <a href="#">This is a link</a>
+               Team:{props.player.team}
                 </div>
              </div>
             </div>
         </div>
-               
+    </div>       
       
     )
 }
