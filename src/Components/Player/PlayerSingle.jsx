@@ -8,7 +8,7 @@ const PlayerSingle=(props)=>{
             <div className="col s12 m7">
             <div className="card">
                 <div className="card-image">
-                <img src="images/sample-1.jpg">
+                <img src="https://besthqwallpapers.com/Uploads/1-2-2018/39081/thumb2-lionel-messi-barcelona-la-liga-spain-corner-kick.jpg"/>
                 <span className="card-title">Card Title</span>
                 </div>
                 <div className="card-content">
