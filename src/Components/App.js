@@ -16,11 +16,19 @@ class App extends React.Component {
     this.updateCurrentPlayer = this.updateCurrentPlayer.bind(this);
   }
 
-  componentDidMount(){
-    const url="http://localhost:8000/players";
-    axios.get(url).then((res)=>{this.setState({players:res.data})}).catch((err)=>console.log(err));
+  componentDidMount() {
+    const url = 'http://localhost:8000/players';
 
-  }
+    axios.get(url)
+      .then((Response) => {
+        this.setState({
+          players: Response.data
+        })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   updateCurrentPlayer(item) {
     this.setState({
@@ -35,7 +43,8 @@ class App extends React.Component {
           <div className="col s12">Menu</div>
         </div>
         <div className="row">
-          <div className="col s3"><PlayerList/>
+          <div className="col s3"><PlayerList players={this.state.players}
+            updateCurrentPlayer={this.updateCurrentPlayer}/>
           </div>
           <div className="col s9"><PlayerSingle /></div>
         </div>
