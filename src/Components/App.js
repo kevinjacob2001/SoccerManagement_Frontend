@@ -16,6 +16,11 @@ class App extends React.Component {
     this.updateCurrentPlayer = this.updateCurrentPlayer.bind(this);
   }
 
+  componentDidMount(){
+    const url="http://localhost:8000/players";
+    axios.get(url).then((res)=>{this.setState({players:res.data})}).catch((err)=>console.log(err));
+
+  }
 
   updateCurrentPlayer(item) {
     this.setState({
