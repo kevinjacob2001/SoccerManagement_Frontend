@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import PlayerList from './Player/PlayerList';
 import PlayerSingle from './Player/PlayerSingle';
 import PlayerForm from './Player/PlayerForm';
 
-function App() {
+class App extends Component() {
+  render(){
   return (
    <div className="container-fluid">
      <div className="row">
@@ -22,6 +23,7 @@ function App() {
 
    </div>
   );
+ }
 }
 
 export default App;
