@@ -52,7 +52,7 @@ class App extends React.Component {
           <div className="col s3"><PlayerList players={this.state.players}
             updateCurrentPlayer={this.updateCurrentPlayer}/>
           </div>
-          <div className="col s9"><PlayerSingle /></div>
+          <div className="col s9"><PlayerSingle player={this.state.currentPlayer}/></div>
         </div>
         <div className="row">
           <div className="col s12"><PlayerForm /></div>
