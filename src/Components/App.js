@@ -42,8 +42,8 @@ this.updateCurrentPlayer=this.updateCurrentPlayer.bind(this);
         <div className="row">
          
           <nav>
-            <div className="nav-wrapper deep-purple darken-2">
-              <a href="/" className="brand-logo">Soccer Management </a>
+            <div className="nav-wrapper deep-purple darken-2 ">
+              <a href="/" className="brand-logo">Soccer Management</a>
             </div>
           </nav>
         
