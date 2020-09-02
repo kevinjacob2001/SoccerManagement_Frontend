@@ -12,8 +12,8 @@ const PlayerSingle=(props)=>{
                 <span className="card-title">{props.player.firstName} {props.player.lastName}</span>
                 </div>
                 <div className="card-content">
-                        <p>Phone:{props.player.phone}   Email:{props.player.email}</p>
-                        <p>Strength:{props.player.strength} Endurance:{props.player.endurance}</p>
+                        <div><p className="col 6">Phone:{props.player.phone}</p>  <p className="col 6"> Email:{props.player.email}</p></div>
+                        <div><p className="col 6">Strength:{props.player.strength}</p>  <p className="col 6"> Endurance(Out of 3):{props.player.endurance}</p></div>
 
                 </div>
                 <div className="card-action">
