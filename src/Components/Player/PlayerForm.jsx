@@ -1,16 +1,32 @@
 import React from 'react';
 import { Component } from 'react';
+import axios from 'axios';
 
 class PlayerForm extends Component{
-    constructor(){
-        super()
-    }
+        submitPlayer(e){
+            e.preventDefault();
+                axios.post("http://localhost:8000/players",{
+                    firstName:this.refs.firstName.value,
+                    lastName:this.refs.lastName.value,
+                    team:this.refs.team.value,
+                    email:this.refs.email.value,
+                    phone:this.refs.phone.value,
+                  endurance:this.refs.endurance.value
+
+                }).then((res)=>{
+                    console.log(res)
+                }).catch((error)=>{
+                    console.log(error)
+                });
+
+        }
+
     render(){
         return(
            
   <div className="row">
       <h4 className="center">Add a new player.</h4>
-            <form className="col s12" onSubmit={this.submitPlayer.bind(this)}>
+            <form style={{color:"black"}} className="col s12" onSubmit={this.submitPlayer.bind(this)}>
                 <div className="row">
                     <div className="input-field col s6">
                         <input id="firstName" ref="firstName" type="text"/>
@@ -38,9 +54,11 @@ class PlayerForm extends Component{
                         <label htmlFor="endurance">Endurance(out of 3)</label>
                     </div>
                 </div>
-                <button className="btn waves-effect waves-light" type="submit" name="action">
+                <div className="center">
+                <button style={{backgroundColor:"blue"}} className=" btn waves-effect waves-dark" type="submit" name="action">
                     Add Player
                 </button>
+                </div>
             </form>
 </div>
         )
